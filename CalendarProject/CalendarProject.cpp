@@ -1,12 +1,12 @@
 ﻿#include <windows.system.h> 
 #include <iostream>
-#include "CalendarModule.h"
+#include "MainFunctions.h"
 
 using namespace std;
 
 int main()
 {
-	CalendarFunctions CalFunctions;
+	MainFunctions CalFunctions;
 
 	setlocale(LC_ALL, "Russian");
 
