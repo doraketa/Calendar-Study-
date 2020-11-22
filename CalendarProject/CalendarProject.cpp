@@ -1,12 +1,15 @@
 ﻿#include <windows.system.h> 
 #include <iostream>
+
 #include "MainFunctions.h"
+#include "CheckFunctions.h"
 
 using namespace std;
 
 int main()
 {
 	MainFunctions CalFunctions;
+	CheckFunctions cFunctions;
 
 	setlocale(LC_ALL, "Russian");
 
@@ -15,20 +18,14 @@ int main()
 	cout << "Введите месяц: " << endl;
 	cin >> inputedMonth;
 
-	while (inputedMonth < 1 || inputedMonth > 12)
-	{
-		cout << "Ошибка. Месяц не может быть меньше 1 и больше 12" << endl;
+	while (cFunctions.isMonthUnknown(inputedMonth))
 		cin >> inputedMonth;
-	}
 
 	cout << "Введите год: " << endl;
 	cin >> inputedYear;
 
-	while (inputedYear < 1919 || inputedYear > 2029)
-	{
-		cout << "Ошибка. Год не может быть меньше 1919 и больше 2029" << endl;
+	while (cFunctions.isYearUnknown(inputedYear))
 		cin >> inputedYear;
-	}
 
 	CalFunctions.getCalendar(inputedYear, inputedMonth);
 	return 0;

@@ -151,9 +151,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CalendarProject.cpp" />
+    <ClCompile Include="CheckFunctions.cpp" />
     <ClCompile Include="MainFunctions.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CheckFunctions.h" />
     <ClInclude Include="MainFunctions.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
