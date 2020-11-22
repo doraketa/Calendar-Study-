@@ -68,16 +68,15 @@ public:
 	}
 
 	// Beauty calendar output
-	void drawCalendar(int gettedMonth, int gettedEmptyStr, int gettedNumberOfDaysInMonth)
+	void drawCalendar(int gettedMonth, int gettedEmptyStr, int gettedNumberOfDaysInMonth, int gettedYear)
 	{
 		system("CLS");
 
-		cout << endl << getMonthNameByID(gettedMonth) << endl;
-
-		cout << "\n ÏÍ\tÂÒ\tÑÐ\t×Ò\tÏÒ\tÑÁ\tÂÑ		\n ";
+		printf("\n %s %d \n", getMonthNameByID(gettedMonth), gettedYear);
+		printf("\n ÏÍ\tÂÒ\tÑÐ\t×Ò\tÏÒ\tÑÁ\tÂÑ \n");
 
 		for (int e = 0; e < gettedEmptyStr; e++)
-			cout << "\t";
+			printf ("\t");
 
 		for (int d = 1; d <= gettedNumberOfDaysInMonth; d++)
 			cout << d << ((gettedEmptyStr + d) % 7 == 0 ? "\n " : "\t");
@@ -121,7 +120,7 @@ public:
 		int getEmptyStr = CalendarStructure.getEmptyStr;
 		int numberOfDays = CalendarStructure.numberOfDaysInMonth;
 
-		drawCalendar(gettedMonth, getEmptyStr, numberOfDays);
+		drawCalendar(gettedMonth, getEmptyStr, numberOfDays, gettedYear);
 	}
 };
 

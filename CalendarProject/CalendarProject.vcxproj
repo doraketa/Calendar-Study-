@@ -155,6 +155,7 @@
     <ClCompile Include="MainFunctions.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CalendarProject.h" />
     <ClInclude Include="CheckFunctions.h" />
     <ClInclude Include="MainFunctions.h" />
     <ClInclude Include="resource.h" />
